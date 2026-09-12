@@ -23,7 +23,7 @@ if st.button("Generate Solution Plan"):
             try:
                 client = genai.Client(api_key=api_key)
                 response = client.models.generate_content(
-                    model='gemini-2.5-flash',
+                    model='gemini-1.5-flash',
                     contents=f"You are a civic helper AI. Provide 3 actionable, low-cost community solutions for: {problem}"
                 )
                 st.markdown(response.text)
